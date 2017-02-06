@@ -1,0 +1,32 @@
+
+<div class="text-center">
+
+<%= @question %>
+
+<p>YOU</p>
+
+</div>
+
+
+
+<div class="text-center">
+
+<% if @question == "i am going to work right now!" %>
+  <p> GOOD !</p>
+
+<% elsif @question.end_with?("?") %>
+
+  <p>Silly question, get dressed and go to work!</p>
+
+<% else %>
+
+  <p> I don't care, get dressed and go to work! </p>
+
+
+<% end %>
+
+<p>YOUR COACH</p>
+
+</div>
+
+<%= link_to "Ask new question", ask_path %>
